@@ -56,13 +56,15 @@ The project uses the Heart Disease UCI Dataset containing 13 clinical features:
         -- Value 1: > 50% diameter narrowing
 
 ## 📊 Model Performance
-- chose **Random Forest** as the best model since it has a good recall-precision balance
+- While the Logistic Regression achieved a perfect  1.0 Recall (it identified all positive cases), its Precision is very low ( 0.622222 ). This low Precision means it had many false positives, which significantly dragged down its overall 𝐹2 score to 0.891720.
+- The Random Forest achieved a high Recall ( 0.928571 ) while maintaining a strong Precision ( 0.896552 ), leading to the superior final 𝐹2 score
+- So we can say that Random Forest is the most effective model.
 
-| Model               | CV Score | Test Accuracy | Test Precision | Test Recall | Test F1  | Test AUC |
-|----------------------|----------|---------------|----------------|-------------|----------|----------|
-| Logistic Regression  | 0.853067 | 0.672131      | 0.583333       | 1.000000    | 0.736842 | 0.951299 |
-| Random Forest        | 0.793257 | 0.918033      | 0.896552       | 0.928571    | 0.912281 | 0.953463 |
-| SVM                  | 0.802667 | 0.868852      | 0.812500       | 0.928571    | 0.866667 | 0.950216 |
+| Model | Baseline_CV | Best_CV | Baseline_Test | Best_Test | Best_Test_Accuracy | Best_Test_Precision | Best_Test_Recall |
+|:--------------------|--------------:|----------:|----------------:|------------:|---------------------:|----------------------:|-------------------:|
+| Random Forest       |        0.7636 |    0.7824 |          0.9441 |      0.9220 |               0.9180 |                0.8966 |             0.9286 |
+| SVM                 |        0.7525 |    0.8041 |          0.9286 |      0.9028 |               0.8689 |                0.8125 |             0.9286 |
+| Logistic Regression |        0.7865 |    0.8571 |          0.9091 |      0.8917 |               0.7213 |                0.6222 |             1.0000 |
 
 
 ## 🏗️ Project Structure
