@@ -1,9 +1,20 @@
 # ❤️ Heart Disease Prediction System
-A comprehensive machine learning pipeline for predicting heart disease risk using clinical parameters from the UCI Heart Disease dataset.
+🎓 Final Capstone Project — Sprints x Microsoft Summer Camp - AI and Machine Learning
 
+A comprehensive machine learning pipeline for predicting heart disease risk using clinical parameters from the UCI Heart Disease dataset.
 
 ## 📋 Project Overview
 This project implements a complete machine learning pipeline to analyze and predict heart disease risk. The workflow includes data preprocessing, feature selection, dimensionality reduction, supervised/unsupervised learning, hyperparameter tuning, and web deployment.
+
+🔗 Live Demo: https://heartdiseaseproject7.streamlit.app/
+
+## Features
+- Interactive prediction interface
+- Real-time risk prediction
+- Feature-based clinical input
+- ML model optimized using GridSearchCV
+
+
 ## 🎯 Objectives
 - **Data Preprocessing & Cleaning**: Handle missing values, encoding, and feature scaling
 - **Dimensionality Reduction**: Apply PCA to retain essential features
@@ -11,7 +22,8 @@ This project implements a complete machine learning pipeline to analyze and pred
 - **Supervised Learning**: Train classification models (Logistic Regression, Decision Trees, Random Forest, SVM)
 - **Unsupervised Learning**: Apply K-Means and Hierarchical Clustering
 - **Model Optimization**: Hyperparameter tuning with GridSearchCV and RandomizedSearchCV
-- **Deployment**: Build and deploy a Streamlit UI with Ngrok for public access
+- **Deployment**: Build and deploy a Streamlit web application using Streamlit Cloud
+
 
 ## 📊 Dataset Information
 The project uses the Heart Disease UCI Dataset containing 13 clinical features:
@@ -55,16 +67,27 @@ The project uses the Heart Disease UCI Dataset containing 13 clinical features:
         -- Value 0: < 50% diameter narrowing
         -- Value 1: > 50% diameter narrowing
 
+## 🖥️ Application Preview
+
+### Input Interface
+![App Input](images/app_input.png)
+
+### Prediction Result
+![Prediction Result](images/prediction_result.png)
+
+
 ## 📊 Model Performance
-- While the Logistic Regression achieved a perfect  1.0 Recall (it identified all positive cases), its Precision is very low ( 0.622222 ). This low Precision means it had many false positives, which significantly dragged down its overall 𝐹2 score to 0.891720.
+- While the Logistic Regression achieved a perfect  1.0 Recall (it identified all positive cases), its Precision is very low ( 0.608696 ). This low Precision means it had many false positives, which significantly dragged down its overall 𝐹2 score to 0.886076.
 - The Random Forest achieved a high Recall ( 0.928571 ) while maintaining a strong Precision ( 0.896552 ), leading to the superior final 𝐹2 score
 - So we can say that Random Forest is the most effective model.
 
+
 | Model | Baseline_CV | Best_CV | Baseline_Test | Best_Test | Best_Test_Accuracy | Best_Test_Precision | Best_Test_Recall |
 |:--------------------|--------------:|----------:|----------------:|------------:|---------------------:|----------------------:|-------------------:|
-| Random Forest       |        0.7636 |    0.7824 |          0.9441 |      0.9220 |               0.9180 |                0.8966 |             0.9286 |
-| SVM                 |        0.7525 |    0.8041 |          0.9286 |      0.9028 |               0.8689 |                0.8125 |             0.9286 |
-| Logistic Regression |        0.7865 |    0.8571 |          0.9091 |      0.8917 |               0.7213 |                0.6222 |             1.0000 |
+| **Random Forest** | 0.7636 | 0.7825 | 0.9441 | **0.9220** | 0.9180 | 0.8966 | 0.9286 |
+| **SVM** | 0.7461 | 0.8130 | 0.9220 | **0.9091** | 0.8852 | 0.8387 | 0.9286 |
+| **Logistic Regression** | 0.7865 | 0.8583 | 0.9091 | **0.8861** | 0.7049 | 0.6087 | 1.0000 |
+
 
 
 ## 🏗️ Project Structure
@@ -83,10 +106,8 @@ Heart_Disease_Project/
 │   ├── final_model.pkl
 │── ui/
 │   ├── app.py (Streamlit UI)
-│── deployment/
-│   ├── ngrok_setup.txt
-│── results/
-│   ├── evaluation_metrics.txt
+│── images/
+│   ├── *.png
 │── README.md
 │── requirements.txt
 │── .gitignore
@@ -110,9 +131,11 @@ pip install -r requirements.txt
 ```
 streamlit run ui/app.py
 ```
-Access the application
+Access the application locally
 Open your browser and go to: http://localhost:8501
 
 
 ## Author
 - Omniah Arafah
+- GitHub: https://github.com/omniah7  
+- Portfolio: https://omniah7.github.io/
