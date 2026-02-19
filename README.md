@@ -6,6 +6,8 @@ A comprehensive machine learning pipeline for predicting heart disease risk usin
 ## 📋 Project Overview
 This project implements a complete machine learning pipeline to analyze and predict heart disease risk. The workflow includes data preprocessing, feature selection, dimensionality reduction, supervised/unsupervised learning, hyperparameter tuning, and web deployment.
 
+## 🖥️ Application Preview
+![App Interface](images/screenshot1.png)
 🔗 Live Demo: https://heartdiseaseproject7.streamlit.app/
 
 ## Features
@@ -66,14 +68,6 @@ The project uses the Heart Disease UCI Dataset containing 13 clinical features:
 - `target`: diagnosis of heart disease (angiographic disease status)
         -- Value 0: < 50% diameter narrowing
         -- Value 1: > 50% diameter narrowing
-
-## 🖥️ Application Preview
-
-### Input Interface
-![App Input](images/app_input.png)
-
-### Prediction Result
-![Prediction Result](images/prediction_result.png)
 
 
 ## 📊 Model Performance
